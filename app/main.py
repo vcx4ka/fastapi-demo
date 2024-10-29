@@ -21,5 +21,9 @@ def multiply(c: int, d: int):
     return {"product": c * d}
 
 @app.get("/square/{f}")
-def add(f: int):
+def square(f: int):
     return {"square": f * f}
+
+@app.get("/subtract/{g}/{h}")
+def subtract(g: int, h: int):
+    return{"subtract": g - h}
