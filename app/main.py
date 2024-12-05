@@ -26,7 +26,7 @@ app.add_middleware(
 
 @app.get("/")  # zone apex
 def zone_apex():
-    return {"Good Day": "Sunshine!"}
+    return {"Good Evening": "Moonlight!"}
 
 @app.get('/genres')
 def get_genres():
@@ -77,3 +77,11 @@ def add(a: int, b: int):
 @app.get("/multiply/{c}/{d}")
 def multiply(c: int, d: int):
     return {"product": c * d}
+
+@app.get("/square/{f}")
+def square(f: int):
+    return {"square": f * f}
+
+@app.get("/subtract/{g}/{h}")
+def subtract(g: int, h: int):
+    return{"subtract": g - h}
